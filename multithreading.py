@@ -1,4 +1,3 @@
-from threading import Thread
 from concurrent.futures import ThreadPoolExecutor
 import requests
 from timer import timer
@@ -12,6 +11,6 @@ def fetch(URL):
 @timer(1,1)
 def main():
     with ThreadPoolExecutor(max_workers=40) as thread:
-        thread.map(fetch, [URL] * 50)
+        thread.map(fetch, [URL] * 100)
         thread.shutdown(wait=True)
     

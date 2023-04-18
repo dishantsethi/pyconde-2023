@@ -11,5 +11,5 @@ def fetch():
 @timer(1,1)
 def main():
     with Pool() as pool:
-        pool.starmap(fetch, [() for _ in range(0,50)])
+        pool.starmap(fetch, [() for _ in range(0,100)])
     

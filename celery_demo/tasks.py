@@ -12,6 +12,6 @@ def timer(number,repeat):
 
 @timer(1,1)
 def main():
-    for i in range(50):
+    for i in range(100):
         res = fetch.delay(URL)
         print(res, i)
